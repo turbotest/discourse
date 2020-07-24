@@ -96,5 +96,6 @@ setup:
 
 test_suite:
   command: bundle exec rspec
+  
   files:
-    - "spec/**/*_spec.rb"
+    - spec/**/*_spec.rb
