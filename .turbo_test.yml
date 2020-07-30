@@ -52,10 +52,13 @@ install: |
   rm -Rf chruby-0.3.*
 
   ruby-install ruby 2.6.6 --no-reinstall
-  source /usr/local/share/chruby/chruby.sh
-  chruby 2.6.6
 
-  gem install bundler -v 2.1.4 --no-doc
+  echo "source /usr/local/share/chruby/chruby.sh" >> ~/.bash_profile
+  echo "chruby 2.6.6" >> ~/.bash_profile
+  source ~/.bash_profile
+  echo "gem: --no-document" >> ~/.gemrc
+
+  gem install bundler -v 2.1.4
   gem update --system
   gem install mailcatcher
 
